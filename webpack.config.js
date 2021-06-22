@@ -10,6 +10,17 @@ module.exports = {
     publicPath: '/',
   },
   module: {
-    rules: [{ test: /\.js$/, use: [{ loader: 'babel-loader' }] }],
+    rules: [
+      { test: /\.js$/, use: [{ loader: 'babel-loader' }] },
+      {
+        test: /\.css/,
+        sideEffects: true, // temp test until sideeffects added to avatar
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules', '@pluralsight'),
+        ],
+      },
+    ],
   },
 }
