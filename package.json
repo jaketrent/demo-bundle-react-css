@@ -18,6 +18,7 @@
     "webpack-dev-middleware": "^3.7.3"
   },
   "dependencies": {
+    "@pluralsight/ps-design-system-button": "22.1.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
